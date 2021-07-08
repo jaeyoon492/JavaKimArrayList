@@ -14,18 +14,6 @@ public class KimCollector {
         disPlayOutputMessage();
     }
 
-    private void disPlayOutputMessage() {
-        if (kimCount > 0) {
-            showNumberOfKims();
-        }
-    }
-
-    private void showNumberOfKims() {
-        System.out.println("=================================");
-        System.out.println("김씨는 총 " + kimCount + "명이며 " + KIM_ARRAY_LIST + "님 입니다.");
-        System.out.println("=================================");
-    }
-
     private void filter(ArrayList<String> nameList, String delimiter) {
         for (int index = 0; index < numberOfPeople; index++) {
             kimCount = getKimCount(nameList, delimiter, kimCount, KIM_ARRAY_LIST, index);
@@ -37,7 +25,7 @@ public class KimCollector {
     private void notExistKim() {
         if (NOT_KIM_ARRAY_LIST.size() == numberOfPeople) {
             System.out.println("김씨가 한명도 존재하지 않습니다.");
-        }else if(NOT_KIM_ARRAY_LIST.size() > 0){
+        } else if (NOT_KIM_ARRAY_LIST.size() > 0) {
             System.out.println(NOT_KIM_ARRAY_LIST + "는 김씨가 아닙니다.");
         }
     }
@@ -69,6 +57,18 @@ public class KimCollector {
         System.out.println("=================================");
         System.out.println("김씨 콜렉터를 사용해주셔서 감사합니다.");
         System.out.println("아무 이름 5개를 입력해 주세요.");
+        System.out.println("=================================");
+    }
+
+    private void disPlayOutputMessage() {
+        if (kimCount > 0) {
+            showNumberOfKims();
+        }
+    }
+
+    private void showNumberOfKims() {
+        System.out.println("=================================");
+        System.out.println("김씨는 총 " + kimCount + "명이며 " + KIM_ARRAY_LIST + "님 입니다.");
         System.out.println("=================================");
     }
 }
