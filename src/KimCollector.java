@@ -5,14 +5,21 @@ public class KimCollector {
     public static void run() {
         disPlayInputMessage();
         ArrayList<String> nameList = getName();
-        FiteredKim(nameList);
+        filter(nameList, "김");
     }
 
-    private static void FiteredKim(ArrayList<String> nameList) {
+    private static void filter(ArrayList<String> nameList, String delimiter) {
         for (int index = 0; index < 5; index++) {
-            if (nameList.get(index).contains("김")) {
-                System.out.println(nameList.get(index));
+            if (nameList.get(index).substring(0, 1).equals(delimiter)) {
+                System.out.println("김씨성을 가진 사람은 " + nameList.get(index) + "입니다요.");
             }
+            checkLastName(nameList, delimiter, index);
+        }
+    }
+
+    private static void checkLastName(ArrayList<String> nameList, String delimiter, int index) {
+        if (!nameList.get(index).substring(0, 1).equals(delimiter)) {
+            System.out.println((nameList.get(index)) + "는 김씨성이 아닙니다요.");
         }
     }
 
@@ -21,9 +28,6 @@ public class KimCollector {
         ArrayList<String> nameList = new ArrayList<>();
         for (int index = 0; index < 5; index++) {
             nameList.add(scanner.next());
-        }
-        if (!nameList.contains("김")) {
-            System.out.println("김씨성의 이름이 하나도 없습니다.");
         }
         return nameList;
     }
