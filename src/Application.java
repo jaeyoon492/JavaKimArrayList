@@ -1,6 +1,6 @@
 public class Application {
     public static void main(String[] args) {
-        KimCollector kimCollector = new KimCollector();
-        kimCollector.run();
+        LastNameCollector lastNameCollector = new LastNameCollector();
+        lastNameCollector.run();
     }
 }
