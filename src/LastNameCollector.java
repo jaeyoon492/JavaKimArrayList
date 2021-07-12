@@ -10,8 +10,6 @@ public class LastNameCollector {
     private final ArrayList<String> NOT_USER_PICK_LAST_NAME_ARRAY_LIST = new ArrayList<>();
 
 
-
-
     public void run() {
         displayInputMessage();
         ArrayList<String> nameList = getName();
