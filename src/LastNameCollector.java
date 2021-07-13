@@ -8,8 +8,7 @@ public class LastNameCollector {
     private int lastNameCount;
     private final ArrayList<String> USER_PICK_LAST_NAME_ARRAY_LIST = new ArrayList<>();
     private final ArrayList<String> NOT_USER_PICK_LAST_NAME_ARRAY_LIST = new ArrayList<>();
-
-
+    
     public void run() {
         displayInputMessage();
         ArrayList<String> nameList = getName();
